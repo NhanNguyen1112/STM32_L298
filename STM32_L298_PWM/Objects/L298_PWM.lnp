@@ -1,0 +1,13 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\clock.o"
+".\objects\timer.o"
+".\objects\gpio.o"
+".\objects\l298.o"
+".\objects\nvic.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+--strict --scatter ".\Objects\L298_PWM.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\L298_PWM.map" -o .\Objects\L298_PWM.axf
